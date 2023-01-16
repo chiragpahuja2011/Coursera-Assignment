@@ -11,7 +11,7 @@
             $scope.checkTooMuch = function(){
             var splitString = $scope.dishList.split(",");
 
-            if(splitString.length < 3){
+            if(splitString.length <= 3){
                 $scope.message = "Enjoy!!";
             }else if(splitString.length >3){
                 $scope.message = "Too Much!!";
