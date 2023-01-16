@@ -1,11 +1,11 @@
 (function() {
     'use strict';
     
-    angular.module('module1Assign', [])
-        .controller('mod1-ctrl', mod1CtrlFun);
-        mod1CtrlFun.$inject = ['$scope'];
+    angular.module('LunchCheck', [])
+        .controller('LunchCheckController', MyLunchFunction);
+        MyLunchFunction.$inject = ['$scope'];
 
-        function mod1CtrlFun($scope){
+        function MyLunchFunction($scope){
             $scope.message ="";
 
             $scope.checkTooMuch = function(){
