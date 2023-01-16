@@ -9,13 +9,19 @@
             $scope.message ="";
 
             $scope.checkTooMuch = function(){
-            var splitString = $scope.dishList.split(",");
 
-            if(splitString.length <= 3){
-                $scope.message = "Enjoy!!";
-            }else if(splitString.length >3){
-                $scope.message = "Too Much!!";
-            }
+                if($scope.dishList){
+                    var splitString = $scope.dishList.split(",");
+    
+                    if(splitString.length <= 3){
+                        $scope.message = "Enjoy!!";
+                    }else if(splitString.length >3){
+                        $scope.message = "Too Much!!";
+                    }
+    
+                }else{
+                    $scope.message = "Please Enter Data first !!"
+                }   
 
             }
 
